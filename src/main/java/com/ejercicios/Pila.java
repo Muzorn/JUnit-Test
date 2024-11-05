@@ -6,6 +6,24 @@ import java.util.Stack;
  * The type Pila.
  */
 public class Pila {
+    /**
+     * Gets pila.
+     *
+     * @return the pila
+     */
+    public Stack<Integer> getPila() {
+        return pila;
+    }
+
+    /**
+     * Sets pila.
+     *
+     * @param pila the pila
+     */
+    public void setPila(Stack<Integer> pila) {
+        this.pila = pila;
+    }
+
     private Stack<Integer> pila = new Stack<Integer>();
 
     /**
@@ -60,5 +78,20 @@ public class Pila {
         } else {
             return pila.peek();
         }
+    }
+
+    /**
+     * Vacía la pila.
+     */
+    public void empty() {
+        pila.removeAllElements();
+    }
+
+    /**
+     *
+     * @return
+     */
+    public Integer tamanyoPila() {
+        return pila.size();
     }
 }
