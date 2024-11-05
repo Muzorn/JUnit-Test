@@ -31,4 +31,12 @@ class TareaTest {
     void numElementos() {
         assertEquals(TareaTest.tareas.size(), 2);
     }
+
+    /**
+     * Primera tarea.
+     */
+    @Test
+    void primeraTarea() {
+        assertEquals(TareaTest.tareas.get(0).getNombre(), "Comprar pan");
+    }
 }
