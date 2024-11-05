@@ -1,6 +1,7 @@
 package com.ejercicios;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ class TareaTest {
     /**
      * Num elementos.
      */
+    @Tag("High")
     @Test
     void numElementos() {
         assertEquals(TareaTest.tareas.size(), 2);
@@ -35,6 +37,7 @@ class TareaTest {
     /**
      * Primera tarea.
      */
+    @Tag("High")
     @Test
     void primeraTarea() {
         assertEquals(TareaTest.tareas.get(0).getNombre(), "Comprar pan");
@@ -43,6 +46,7 @@ class TareaTest {
     /**
      * Primera tarea completada.
      */
+    @Tag("Medium")
     @Test
     void primeraTareaCompletada() {
         assertFalse(TareaTest.tareas.get(0).isCompletada());
@@ -51,6 +55,7 @@ class TareaTest {
     /**
      * Buscar tarea 3.
      */
+    @Tag("Low")
     @Test
     void buscarTarea3() {
         assertThrows(IndexOutOfBoundsException.class, () -> TareaTest.tareas.get(3));
