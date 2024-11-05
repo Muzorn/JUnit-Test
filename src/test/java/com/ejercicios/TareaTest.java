@@ -44,4 +44,9 @@ class TareaTest {
     void primeraTareaCompletada() {
         assertFalse(TareaTest.tareas.get(0).isCompletada());
     }
+
+    @Test
+    void buscarTarea3() {
+        assertThrows(IndexOutOfBoundsException.class, () -> TareaTest.tareas.get(3));
+    }
 }
