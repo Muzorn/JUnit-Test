@@ -42,6 +42,20 @@ class PilaTest {
     }
 
     /**
+     * No anyade mayor menor que a una pila previamente vacía.
+     *
+     * @param numeroEntrada the numero entrada
+     * @param tamanyoPila   the tamanyo pila
+     */
+    @ParameterizedTest
+    @CsvSource({"1,0", "15,1", "21,0"})
+    void noAnyadeMayorMenorQuePilaVacia(int numeroEntrada, int tamanyoPila) {
+        pila.push(numeroEntrada);
+
+        assertEquals(pila.getPila().size(), tamanyoPila);
+    }
+
+    /**
      * Menor que.
      *
      * @param numElementos the num elementos
