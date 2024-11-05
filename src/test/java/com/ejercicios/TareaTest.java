@@ -39,4 +39,9 @@ class TareaTest {
     void primeraTarea() {
         assertEquals(TareaTest.tareas.get(0).getNombre(), "Comprar pan");
     }
+
+    @Test
+    void primeraTareaCompletada() {
+        assertFalse(TareaTest.tareas.get(0).isCompletada());
+    }
 }
