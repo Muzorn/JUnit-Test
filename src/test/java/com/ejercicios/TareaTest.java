@@ -40,11 +40,17 @@ class TareaTest {
         assertEquals(TareaTest.tareas.get(0).getNombre(), "Comprar pan");
     }
 
+    /**
+     * Primera tarea completada.
+     */
     @Test
     void primeraTareaCompletada() {
         assertFalse(TareaTest.tareas.get(0).isCompletada());
     }
 
+    /**
+     * Buscar tarea 3.
+     */
     @Test
     void buscarTarea3() {
         assertThrows(IndexOutOfBoundsException.class, () -> TareaTest.tareas.get(3));
