@@ -102,6 +102,25 @@ class PilaTest {
     }
 
     /**
+     * Muestra pila vacia sin extraer el último elemento.
+     */
+    @Test
+    void muestraPilaVacia() {
+        assertEquals(pila.getPila().size(), 0);
+        System.out.println(pila.top());
+    }
+
+    /**
+     * Muestra pila no vacia sin extraer el último elemento.
+     */
+    @Test
+    void muestraPilaNoVacia() {
+        pila.push(5);
+        assertNotEquals(pila.getPila().size(), 0);
+        System.out.println(pila.top());
+    }
+
+    /**
      * Tear down.
      */
     @AfterEach
