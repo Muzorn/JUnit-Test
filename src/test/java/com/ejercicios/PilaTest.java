@@ -3,6 +3,7 @@ package com.ejercicios;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -64,6 +65,24 @@ class PilaTest {
     @ValueSource(ints = {1, 2, 3})
     void menorQue(int numElementos) {
         assertEquals(pila.getPila().size(), numElementos);
+    }
+
+    /**
+     * Extrae ultimo pila vacia.
+     */
+    @Test
+    void extraeUltimoPilaVacia() {
+        assertNull(pila.pop());
+    }
+
+    /**
+     * Extrae ultimo pila no vacia.
+     */
+    @Test
+    void extraeUltimoPilaNoVacia() {
+        pila.push(4);
+        
+        assertNotNull(pila.pop());
     }
 
     /**
