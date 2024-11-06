@@ -86,6 +86,22 @@ class PilaTest {
     }
 
     /**
+     * Pila vacia.
+     */
+    @Test
+    void pilaVacia() {
+        assertEquals(pila.getPila().size(), 0);
+    }
+
+    /**
+     * Pila no vacia.
+     */
+    @Test
+    void pilaNoVacia() {
+        assertNotEquals(pila.getPila().size(), 0);
+    }
+
+    /**
      * Tear down.
      */
     @AfterEach
